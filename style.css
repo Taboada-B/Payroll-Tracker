@@ -18,7 +18,9 @@ body {
 }
 
 .wrapper {
-  padding: 30 px 20px 0 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 header {
@@ -107,8 +109,6 @@ tbody tr:nth-child(even) {
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
-  color: red;
-
 }
 
 .float-right {
