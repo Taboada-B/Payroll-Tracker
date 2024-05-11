@@ -28,22 +28,17 @@ const collectEmployees = function () {
   return employeesArray;
 };
 
-console.log(employeesArray, 'here is the array hopefully!')
 // Display the average salary
-
-
-let totalSalary = [];
-let averageSalary = [];
-
-
-const displayAverageSalary = function (employeesArray) {
-
   // TODO: Calculate and display the average salary  
-  //for (let i = 0; i < employeesArray.length; i++) {
-    //total += employeesArray.salary[i];
- 
-  }
+  const displayAverageSalary = function () {
+    let totalSalary = 0;
 
+    for (let i = 0; i < employeesArray.length; i++) {
+        totalSalary += employeesArray[i].salary;
+    }
+
+    const averageSalary = totalSalary / employeesArray.length;
+};
 
 
 
