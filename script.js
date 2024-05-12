@@ -11,12 +11,17 @@ const collectEmployees = function () {
     let a = prompt('Enter your first name');
     let b = prompt('Enter your last name');
     let c = prompt('Enter your salary');
+    if (c < 0 || NaN) {// Convert salary to a number, default to 0 if not a valid number
+      c = 0;}
+    else {
+    c = parseFloat(c);
+      }
 
     // Create an object with the entered data
     const employee = {
       firstName: a,
       lastName: b,
-      salary: parseInt(c) || 0 // Convert salary to a number, default to 0 if not a valid number
+      salary: c 
     };
 
     // Add the employee object to the employeesArray
