@@ -11,7 +11,7 @@ const collectEmployees = function () {
     let a = prompt('Enter your first name');
     let b = prompt('Enter your last name');
     let c = prompt('Enter your salary');
-    if (c < 0 || NaN) {// Convert salary to a number, default to 0 if not a valid number
+    if (c < 0 || isNaN(c)) {// Convert salary to a number, default to 0 if not a valid number
       c = 0;}
     else {
     c = parseFloat(c);

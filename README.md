@@ -6,4 +6,3 @@ something here
 ## MIT LICENSE
 
 ## Functionality
-
