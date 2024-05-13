@@ -3,25 +3,25 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 // TODO: Get user input to create and return an array of employee objects
-let employeesArray = [];
+let employeesArray = []; //an array, arrays are accesed by index
 const collectEmployees = function () {
   let moreNames = true;
 
   while (moreNames) {
-    let a = prompt('Enter your first name');
-    let b = prompt('Enter your last name');
-    let c = prompt('Enter your salary');
-    if (c < 0 || isNaN(c)) {// Convert salary to a number, default to 0 if not a valid number
-      c = 0;}
+    let firstName = prompt('Enter your first name');
+    let lastName = prompt('Enter your last name');
+    let salary = prompt('Enter your salary');
+    if (salary < 0 || isNaN(salary)) {// Convert salary to a number, default to 0 if not a valid number
+      salary = 0;}
     else {
-    c = parseFloat(c);
+    salary = parseFloat(salary);
       }
 
     // Create an object with the entered data
-    const employee = {
-      firstName: a,
-      lastName: b,
-      salary: c 
+    const employee = { //object
+      firstName,  //keys
+      lastName,
+      salary 
     };
 
     // Add the employee object to the employeesArray
