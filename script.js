@@ -2,7 +2,6 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
-// TODO: Get user input to create and return an array of employee objects
 let employeesArray = []; //an array, arrays are accesed by index
 const collectEmployees = function () {
   let moreNames = true;
@@ -11,7 +10,9 @@ const collectEmployees = function () {
     let firstName = prompt('Enter your first name');
     let lastName = prompt('Enter your last name');
     let salary = prompt('Enter your salary');
-    if (salary < 0 || isNaN(salary)) {// Convert salary to a number, default to 0 if not a valid number
+
+    // Convert salary to a number, default to 0 if not a valid number
+    if (salary < 0 || isNaN(salary)) {
       salary = 0;}
     else {
     salary = parseFloat(salary);
@@ -34,7 +35,7 @@ const collectEmployees = function () {
 };
 
 // Display the average salary
-// TODO: Calculate and display the average salary  
+// Calculate and display the average salary  
 const displayAverageSalary = function () {
   let totalSalary = 0;
 
@@ -47,20 +48,14 @@ const displayAverageSalary = function () {
 };
 
 
-
 // Select a random employee
 const getRandomEmployee = function () {
-  // TODO: Select and display a random employee
+  // Select and display a random employee
   const randIndex = Math.floor(Math.random() * employeesArray.length);
   const randomEmployee = employeesArray[randIndex];
 console.log(`${randomEmployee.firstName} ${randomEmployee.lastName} you won the prize!`);
 }
 
-/*
-  ====================
-  STARTER CODE
-  Do not modify any of the code below this line:
-*/
 
 // Display employee data in an HTML table
 const displayEmployees = function (employeesArray) {
